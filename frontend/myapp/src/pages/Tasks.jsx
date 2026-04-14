@@ -23,7 +23,7 @@ const Tasks = () => {
 
       console.log('🔍 Fetching tasks with token...');
       
-      const res = await axios.get('http://localhost:5000/api/tasks', {
+      const res = await axios.get('https://mern-job-task.onrender.com/api/tasks', {
         headers: { 
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -65,7 +65,7 @@ const Tasks = () => {
 
       console.log('📝 Creating task:', formData);
 
-      const res = await axios.post('http://localhost:5000/api/tasks', formData, {
+      const res = await axios.post('https://mern-job-task.onrender.com/api/tasks', formData, {
         headers: { 
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -103,7 +103,7 @@ const Tasks = () => {
 
       console.log(`✏️ Updating task ${id} to ${newStatus}`);
 
-      const res = await axios.put(`http://localhost:5000/api/tasks/${id}`, 
+      const res = await axios.put(`https://mern-job-task.onrender.com/api/tasks/${id}`, 
         { status: newStatus }, 
         {
           headers: { 
@@ -132,7 +132,7 @@ const Tasks = () => {
 
       console.log(`🗑️ Deleting task ${id}`);
 
-      const res = await axios.delete(`http://localhost:5000/api/tasks/${id}`, {
+      const res = await axios.delete(`https://mern-job-task.onrender.com/api/tasks/${id}`, {
         headers: { 
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json'

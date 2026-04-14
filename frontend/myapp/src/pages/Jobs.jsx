@@ -16,8 +16,7 @@ const Jobs = () => {
 
   const fetchJobs = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/jobs');
-      // Ensure res.data is an array to avoid map errors
+const res = await axios.get('https://mern-job-task.onrender.com/api/jobs');      // Ensure res.data is an array to avoid map errors
       setJobs(Array.isArray(res.data) ? res.data : []);
     } catch (err) {
       toast.error("Failed to load jobs");
@@ -28,7 +27,7 @@ const Jobs = () => {
 
   const handleApply = async (jobId) => {
     try {
-      await axios.post(`http://localhost:5000/api/jobs/${jobId}/apply`, {}, {
+      await axios.post(`https://mern-job-task.onrender.com/api/jobs/${jobId}/apply`, {}, {
         headers: { Authorization: `Bearer ${token}` }
       });
       toast.success("Applied Successfully!");

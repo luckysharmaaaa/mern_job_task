@@ -24,7 +24,7 @@ const Profile = () => {
     try {
       console.log('📋 Fetching user tasks...');
       
-      const res = await axios.get('http://localhost:5000/api/tasks', {
+      const res = await axios.get('https://mern-job-task.onrender.com/api/tasks', {
         headers: { Authorization: `Bearer ${token}` }
       });
 

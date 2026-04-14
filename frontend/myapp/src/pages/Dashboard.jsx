@@ -21,7 +21,7 @@ const Dashboard = () => {
       try {
         console.log('📊 Fetching dashboard stats...');
         
-        const res = await axios.get('http://localhost:5000/api/dashboard/stats', {
+        const res = await axios.get('https://mern-job-task.onrender.com/api/dashboard/stats', {
           headers: { 
             Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json'
